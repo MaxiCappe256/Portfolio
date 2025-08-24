@@ -15,14 +15,16 @@
 
 <body>
     <header class="header">
-        <nav class="navbar container">
+        <nav class="navbar">
             <div class="navbar__logo">
                 <a href="index.html">
                     <p class="logo__titulo">M</p><span class="navbar__span">C</span>
                 </a>
             </div>
 
-            <div class="navbar__links">
+            <i class="fa-solid fa-bars navbar__hambur"></i>
+
+            <div class="navbar__links active">
                 <a href="#inicio" class="navbar__link">Inicio</a>
                 <a href="#proyectos" class="navbar__link">Proyectos</a>
                 <a href="#tecnologias" class="navbar__link">Tecnolgias</a>
@@ -33,7 +35,7 @@
         </nav>
     </header>
 
-    <main class="main container">
+    <main class="main">
         <section id="inicio" class="hero">
             <div class="hero-content">
                 <!-- Texto -->
@@ -230,9 +232,9 @@
 
     <footer class="footer">
         <div class="footer__container">
-            <p>&copy; 2025 - Maximiliano Cappelletti - Todos los derechos reservados</p>
+            <p class="footer__paragraph">&copy; 2025 - Maximiliano Cappelletti <br>Todos los derechos reservados</p>
 
-            <div class="text__social-links" id="navbar__footer">
+            <div class="text__social-links text__social-links-footer" id="navbar__footer">
                 <a href="#" target="_blank" class="social-links__link"><i class="fa-brands fa-github"></i></a>
                 <a href="#" target="_blank" class="social-links__link"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#" target="_blank" class="social-links__link"><i class="fa-brands fa-whatsapp"></i></a>
@@ -244,6 +246,6 @@
     </footer>
 </body>
 
-<script></script>
+<script src="js/js.js"></script>
 
 </html>
