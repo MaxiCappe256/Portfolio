@@ -20,6 +20,7 @@ html {
     scrollbar-color: var(--primary-color) var(--dark-bg);
 }
 
+
 body {
     font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--dark-bg);
@@ -262,6 +263,7 @@ section {
 
     .navbar__links {
         position: fixed;
+        border-left: 1px solid var(--primary-color);
         top: 0;
         right: -100%;
         width: 80vw;
@@ -364,9 +366,31 @@ section {
 
 .text__subtitle {
     font-size: 3rem;
+    letter-spacing: 10px;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
     font-weight: 700;
+    animation: typing 2s steps(18),
+    blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid var(--border-color);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 @media (max-width: 768px) {
@@ -375,6 +399,8 @@ section {
         margin-bottom: 1rem;
     }
 }
+
+
 
 .text__paragraph {
     font-size: 1.1rem;
@@ -588,6 +614,22 @@ section {
 
 
 /* PROJECTS */
+
+.proyects {
+    animation: appear 1s linear;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.4;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
 
 .proyects-container {
     display: flex;
