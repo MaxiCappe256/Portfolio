@@ -8,7 +8,7 @@ hamburguer.addEventListener('click', () => {
 
 links.forEach((link) => {
   link.addEventListener('click', () => {
-    menu.classList.toggle('active');
+    menu.classList.remove('active');
   });
 });
 
