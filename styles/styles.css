@@ -790,22 +790,6 @@ section:not(.hero) {
 
 /* PROJECTS */
 
-.proyects {
-  animation: appear 1s linear;
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    scale: 0.4;
-  }
-
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
 .proyects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
@@ -1430,5 +1414,32 @@ section:not(.hero) {
 
   .btn__footer {
     font-size: 0.7rem;
+  }
+}
+
+/* Scroll reveal (Intersection Observer en js/js.js) */
+
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal--soft {
+  transform: translate3d(0, 18px, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
