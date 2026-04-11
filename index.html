@@ -139,14 +139,16 @@
       </section>
 
       <section id="proyectos" class="proyects">
-        <h2 class="proyects__title section-title reveal">Proyectos Personales</h2>
+        <h2 class="proyects__title section-title reveal">
+          Proyectos Personales
+        </h2>
 
         <div class="proyects-container">
           <div class="proyects__card reveal">
             <div class="card__container-img">
               <img
-                src="assets/dashboard-natural-management.png"
-                alt="Imagen Proyecto"
+                src="assets/dashboard.png"
+                alt="Dashboard del SaaS Bizy Turnera"
                 class="card__img"
                 width="800"
                 height="500"
@@ -155,9 +157,59 @@
             </div>
 
             <div class="card__info">
-              <h3 class="card__title">Gestion Almacen Natural</h3>
+              <div class="card__header">
+                <h3 class="card__title">Bizy Turnera</h3>
+                <span class="card__badge card__badge--progress">En curso</span>
+              </div>
               <p class="card__description">
-                Sistema de gestión para un almacen de productos naturales que
+                SaaS multi-tenant para gestionar turnos, clientes, servicios y
+                pagos en negocios como barberías, clínicas o consultorios.
+                Incluye panel con métricas, roles admin y staff, y API en NestJS
+                con datos aislados por negocio.
+              </p>
+
+              <div class="card__tecnology">
+                <p>Frontend:</p>
+                <span class="card__item">NextJS</span>
+                <span class="card__item">TypeScript</span>
+                <span class="card__item">TailwindCSS</span>
+                <p>Backend:</p>
+                <span class="card__item">NestJS</span>
+                <span class="card__item">PostgreSQL</span>
+                <span class="card__item">TypeORM</span>
+              </div>
+
+              <div class="card__links">
+                <a
+                  href="https://github.com/MaxiCappe256/bizy-turnera-saas"
+                  class="card__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-github"></i>Repositorio</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="proyects__card reveal">
+            <div class="card__container-img">
+              <img
+                src="assets/dashboard-natural-management.png"
+                alt="Dashboard gestión almacén natural"
+                class="card__img"
+                width="800"
+                height="500"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card__info">
+              <div class="card__header">
+                <h3 class="card__title">Gestión Almacén Natural</h3>
+                <span class="card__badge card__badge--done">Terminado</span>
+              </div>
+              <p class="card__description">
+                Sistema de gestión para un almacén de productos naturales que
                 permite administrar productos, ventas, categorías, gastos y
                 stock desde un dashboard central.
               </p>
@@ -176,12 +228,14 @@
                   href="https://mas-real-gestion.vercel.app/"
                   class="card__link"
                   target="_blank"
+                  rel="noopener noreferrer"
                   ><i class="fas fa-link"></i>Demo</a
                 >
                 <a
                   href="https://github.com/MaxiCappe256/natural-store-management"
                   class="card__link"
                   target="_blank"
+                  rel="noopener noreferrer"
                   ><i class="fab fa-github"></i>Repositorio</a
                 >
               </div>
@@ -192,7 +246,7 @@
             <div class="card__container-img">
               <img
                 src="assets/dashboard-gym-management.png"
-                alt="Imagen Proyecto"
+                alt="Dashboard gestión entrenador personal"
                 class="card__img"
                 width="800"
                 height="500"
@@ -201,7 +255,10 @@
             </div>
 
             <div class="card__info">
-              <h3 class="card__title">Gestión Entrenador Personal</h3>
+              <div class="card__header">
+                <h3 class="card__title">Gestión Entrenador Personal</h3>
+                <span class="card__badge card__badge--done">Terminado</span>
+              </div>
               <p class="card__description">
                 Aplicación web para la gestión de clientes y turnos de un
                 entrenador personal. Permite registrar clientes, organizar
@@ -223,12 +280,14 @@
                   href="https://aphild.vercel.app/"
                   class="card__link"
                   target="_blank"
+                  rel="noopener noreferrer"
                   ><i class="fas fa-link"></i>Demo</a
                 >
                 <a
                   href="https://github.com/MaxiCappe256/gym-management-system"
                   class="card__link"
                   target="_blank"
+                  rel="noopener noreferrer"
                   ><i class="fab fa-github"></i>Repositorio</a
                 >
               </div>
@@ -420,7 +479,9 @@
       </section>
 
       <section id="experiencia" class="experiencia">
-        <h2 class="experiencia__title section-title reveal">Experiencia Laboral</h2>
+        <h2 class="experiencia__title section-title reveal">
+          Experiencia Laboral
+        </h2>
 
         <div class="experiencia__timeline">
           <div class="timeline__item reveal">
@@ -642,13 +703,17 @@
         </div>
       </div>
     </footer>
-  </body>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-  ></script>
-  <script>
-    emailjs.init('v8VHOnfONUxS2n-bn');
-  </script>
-  <script src="js/js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      try {
+        if (typeof emailjs !== 'undefined') {
+          emailjs.init('v8VHOnfONUxS2n-bn');
+        }
+      } catch (e) {
+        console.warn('EmailJS no se pudo inicializar:', e);
+      }
+    </script>
+    <script src="js/js.js"></script>
+  </body>
 </html>

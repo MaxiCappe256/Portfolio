@@ -21,9 +21,14 @@ document.addEventListener('click', (e) => {
   }
 });
 
+let scrollRevealInitialized = false;
+
 function initScrollReveal() {
+  if (scrollRevealInitialized) return;
   const elements = document.querySelectorAll('.reveal');
   if (!elements.length) return;
+
+  scrollRevealInitialized = true;
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     elements.forEach((el) => el.classList.add('is-visible'));
@@ -52,7 +57,11 @@ function initScrollReveal() {
   elements.forEach((el) => observer.observe(el));
 }
 
-document.addEventListener('DOMContentLoaded', initScrollReveal);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initScrollReveal);
+} else {
+  initScrollReveal();
+}
 
 function initEmailForm() {
   const form = document.getElementById('form');
